@@ -145,7 +145,7 @@ First we checked the distributions of variables with `df.describe()`.
 
 - For the interested variable `'easy'`, it has 136,438 `True`s and 97,991 `False`s. Distribution of `'easy'`:
 
-<iframe src="assets/easy_barh.html" width=600 height=450 frameBorder=0></iframe>
+<iframe src="assets/easy_barh.html" width=450 height=450 frameBorder=0></iframe>
 
 Let's observe each column of the descriptive statistics table and take a look at their distributions. 
 
@@ -153,7 +153,7 @@ Let's observe each column of the descriptive statistics table and take a look at
 
 Distribution of `'minutes'`:
 
-<iframe src="assets/mins_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/mins_hist.html" width=600 height=450 frameBorder=0></iframe>
 
 It tells that most of recipes can be finished in one and a half hour, but some of them can take really long time.
 
@@ -161,7 +161,7 @@ It tells that most of recipes can be finished in one and a half hour, but some o
 
 Distribution of `'calories'`:
 
-<iframe src="assets/cals_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/cals_hist.html" width=600 height=450 frameBorder=0></iframe>
 
 The distribution of `'calories'` is very right-skewed and relatively smooth. Its center is around 200 Cal, but there're also some recipes which exceed 1500 Cal!
 
@@ -169,7 +169,7 @@ The distribution of `'calories'` is very right-skewed and relatively smooth. Its
 
 Distribution of `'n_steps'`:
 
-<iframe src="assets/nsteps_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/nsteps_hist.html" width=600 height=450 frameBorder=0></iframe>
 
 Most recipes have no more than 20 steps. The distribution is overall smooth and a little bit right-skewed. 
 
@@ -177,7 +177,7 @@ Most recipes have no more than 20 steps. The distribution is overall smooth and 
 
 Distribution of `'n_ingredients'`:
 
-<iframe src="assets/ningre_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/ningre_hist.html" width=600 height=450 frameBorder=0></iframe>
 
 This distribution is the most normal one among all the univariate analyses!
 
@@ -185,7 +185,7 @@ This distribution is the most normal one among all the univariate analyses!
 
 Distribution of `'avg_rating'`:
 
-<iframe src="assets/avgrt_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/avgrt_hist.html" width=600 height=450 frameBorder=0></iframe>
 
 We can see most of the average ratings are relatively high, larger than 3.5 or even 4. 
 
@@ -194,7 +194,7 @@ We can see most of the average ratings are relatively high, larger than 3.5 or e
 
 First I'd like to show a scatterplot matrix to give a general impression of relationships between variables. 
 
-<iframe src="assets/scatmat.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/scatmat.html" width=600 height=450 frameBorder=0></iframe>
 
 Unfortunately, I have to say I don't find any obvious, strong relationship. 
 
@@ -211,19 +211,19 @@ Below I will show four histograms which show the distributions of the four varia
 
 - `'n_ingredients'`, number of ingredients
 
-<iframe src="assets/ningre_easy.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/ningre_easy.html" width=600 height=450 frameBorder=0></iframe>
 
 - `'n_steps'`, number of steps
 
-<iframe src="assets/nsteps_easy.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/nsteps_easy.html" width=600 height=450 frameBorder=0></iframe>
 
 - `'calories'`
 
-<iframe src="assets/cals_easy.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/cals_easy.html" width=600 height=450 frameBorder=0></iframe>
 
 - `'minutes'`
 
-<iframe src="assets/mins_easy.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/mins_easy.html" width=600 height=450 frameBorder=0></iframe>
 
 Analysis: 
 The most obvious differences occur in `'n_steps'` and `'n_ingredients'`, which are very reasonable: recipes with less steps and less materials are definitely easier to complete. But one thing we can observe is the difference in shapes of `'minutes'`, although the two distributions are similar in trends. The difference in `'minutes'` is not that intuitively and thus interesting. 
@@ -267,7 +267,7 @@ Then I will graph kernel density estimates (using `plotly.figure_factory.create_
 
 Let's plot the distribution of `'calories'` by missingness in `'rating'` to take a look at the two distributions across groups. 
 
-<iframe src="assets/cals_miss.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/cals_miss.html" width=600 height=450 frameBorder=0></iframe>
 
 We can find that the two distributions have similar shapes but different center statistics. In this case, we should use difference in mean/median to perform the permutation test on missingness. As the distributions are skewed by outliers seriously, we'd better choose median to ensure the accuracy. Also, the number of simulations in permutation test is set to be 100. 
 
@@ -277,7 +277,7 @@ After performing the test, we get the **p-value = 0**, smaller than typical sign
 
 Similarly, I plot the distribution of `'n_ingredients'` by missingness in `'rating'`. 
 
-<iframe src="assets/ningre_miss.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/ningre_miss.html" width=600 height=450 frameBorder=0></iframe>
 
 Although the distribution of `'n_ingredients'` when missing rating seems to have an strange fluctuation, but the two distributions are similar in general shapes, and their center statistics are located similarly at about 9. 
 
@@ -309,7 +309,7 @@ I exclude some extreme outliers (like 10,000 minutes) to avoid too much distract
 
 We can see the center statistics are different across groups. Let's look at the graph to get the shapes of whole distributions: 
 
-<iframe src="assets/hypotest.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/hypotest.html" width=600 height=450 frameBorder=0></iframe>
 
 
 I mentioned similar things above, but to recap: first, we are comparing two numeric distributions. Also, by the graph, the two distributions are likely to have different means and medians but similar shapes. So we should use difference in group means or medians as the test statistic. As means are sensitive to outliers and `minutes` have some abnormal outliers, I will use difference in medians as the test statistic.
