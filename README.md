@@ -1,3 +1,17 @@
-# Easy-Recipes-Analysis
-Project 3 for DSC 80 (UCSD, Spring 2023).
-Try to make some changes and check if I can see it on Github.
+# Recipes Analysis: what types of recipes are easy to make? 
+Project 3 for DSC 80 by Rosie Peng (q1peng@ucsd.edu).
+
+## Introduction
+
+
+
+## Cleaning and EDA
+
+
+
+## Assessment of Missingness
+
+
+
+## Hypothesis Testing
+
