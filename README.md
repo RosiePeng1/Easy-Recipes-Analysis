@@ -145,7 +145,7 @@ First we checked the distributions of variables with `df.describe()`.
 
 - For the interested variable `'easy'`, it has 136,438 `True`s and 97,991 `False`s. 
 
-<iframe src="assets/easy_barh.html" width=600 height=450 frameBorder=0></iframe>
+<iframe src="assets\easy_barh.html" width=600 height=450 frameBorder=0></iframe>
 
 - 
 
